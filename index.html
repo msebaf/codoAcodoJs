@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap.min.js"></script>
+    <script src="logica.js" defer></script>
+    <title>Codo a Codo</title>
+  </head>
+  <body>
+
+    <section class="container-fluid bg-black" style="color: #ffffff">
+      <div class="row d-flex align-items-center flex-nowrap">
+        <div class="col-1"></div>
+        <div class="col-1">
+          <img id="codoacodoimg"
+            class="img-fluid"
+            src="res/codoacodo.png"
+            alt="Logo de codo a codo"
+          />
+        </div>
+        <div class="col-md-1">Conf Bs As</div>
+
+        <div class="col-1"></div>
+        <div id="listaheadcont" class="col-7">
+          <input type="checkbox" name="" id="checkbox" class="checkbt">
+          <label for="checkbox" class="checkbt"><img id="bthamb" src="res/588a64cdd06f6719692a2d0d.png" alt=""></label>
+          <ul id="listahead" class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #ffffff;">La conferencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">El lugar y la fecha</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Conviertete en orador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: green;">Comprar tickets</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </section>
+
+   
+<br>
+   
+    <section
+      class="container-fluid"
+    
+    >
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-2 card caja" id="opEstudiante">
+         
+          
+            <p><b>Estudiante</b></p>
+            <p>tienen un descuento</p>
+            <p><b>80%</b></p>
+            <p style="font-size: smaller; color: lightslategrey;">*presentar documentacion</p>
+            
+        
+        </div>
+        <div class="col-2 card caja" id="opTrainee">
+
+
+            
+          <p><b>Trainee</b></p>
+          <p>tienen un descuento</p>
+          <p><b>50%</b></p>
+          <p style="font-size: smaller; color: lightslategrey;">*presentar documentacion</p>
+       
+        </div>
+        <div class="col-2 card caja" id="opJunior">
+         
+          
+          <p><b>Junior</b></p>
+          <p>tienen un descuento</p>
+          <p><b>15%</b></p>
+          <p style="font-size: smaller; color: lightslategrey;">*presentar documentacion</p>
+       
+        </div>
+      </div>
+      <div class="col-2">
+
+    </section>
+
+<br>
+
+    
+
+
+    <section style="text-align: center;">
+      <p>
+        venta<br /><span style="font-size: x-large; font-weight: 600;">VALOR DE TICKET $200</span> <br />
+      </p>
+    </section>
+
+    <section>
+      <form action="">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Nombre" id="nombre"/>
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Apellido" id="apellido" />
+          </div>
+          <div class="col-3"></div>
+        </div><br>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <input type="email" class="form-control" placeholder="Correo"  id="correo"/>
+          </div>
+          <div class="col-3"></div>
+        </div><br>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-3">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" class="form-control" placeholder="Cantidad" name="cantidad" id="cantidad" />
+          </div>
+          <div class="col-3">
+            <label for="categoria">Categoria</label>
+            <select name="categoria" class="form-select" id="categoria">
+              <option value="ninguno" selected>-Elige una opcion-</option>
+              <option value="estudiante" id="estudiante">Estudiante</option>
+              <option value="trainee" id="trainee">Trainee</option>
+              <option value="junior"  id="junior">Junior</option>
+            </select>
+          </div>
+          <div class="col-3"></div>
+        </div><br>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <input type="text" class="form-control" placeholder="" id="precioFinal" value="Total a pagar: $" style="background-color: lightblue;"/>
+          </div>
+          <div class="col-3"></div>
+        </div>
+  
+      <br>
+      <div class="row" id="botones">
+        <div class="col-3"></div>
+        
+        <button id="btnBorrar" class="btn btn-success col-3" style="background-color: rgb(98, 221, 98); margin: 5px;" onclick="borrar(event)">Borrar</button>
+        <button id="btnEnviar" class="btn btn-success col-3" style="background-color: rgb(98, 221, 98); margin: 5px;" onclick="enviar(event)">Resumen</button>
+      
+        <div class="col-3"></div>
+      </div>
+      
+      </form>
+    </section>
+    <br>
+    <section id="navfoot">
+      <ul id="listafoot" class="nav justify-content-around">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"
+            >Preguntas <br />
+            frecuentes</a
+          >
+        </li>
+        <li class="nav-item align-content-center">
+          <a class="nav-link " href="#">Contactanos</a>
+        </li>
+        <li class="nav-item align-content-center">
+          <a class="nav-link" href="#">Prensa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">conferencia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            >Terminos y <br />
+            condiciones</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Privacidad</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Estudiantes</a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
